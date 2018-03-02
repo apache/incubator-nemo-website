@@ -4,10 +4,10 @@ email: nemo@spl.snu.ac.kr
 description: >
   A Data Processing System for Flexible Employment With Different Deployment Characteristics.
 
-baseurl: "/nemo" # the subpath of your site, e.g. /blog/
-url: https://snuspl.github.io/nemo/ # the base hostname & protocol for your site
-git_address: https://github.com/snuspl/nemo
-git_edit_address: https://github.com/snuspl/nemo
+baseurl: "/incubator-nemo" # the subpath of your site, e.g. /blog/
+url: https://apache.github.io/incubator-nemo/ # the base hostname & protocol for your site
+git_address: https://github.com/apache/incubator-nemo
+git_edit_address: https://github.com/apache/incubator-nemo
 
 # theme options from https://bootswatch.com/
 # comment out this to use default Bootstrap
