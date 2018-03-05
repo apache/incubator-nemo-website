@@ -18,8 +18,7 @@
 
 set -e
 
-rm -rf content
-bundle exec jekyll clean
+bundle exec jekyll clean -d content
 bundle exec jekyll build -d content
 
 COMMIT_HASH=`git rev-parse HEAD`
