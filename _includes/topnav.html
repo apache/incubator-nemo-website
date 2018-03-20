@@ -19,7 +19,7 @@
                 <li {% if page.title=='Talks' %} class="active" {% endif %}><a href="{{ "/pages/talks" | prepend: site.baseurl }}">Talks</a></li>
                 <li {% if page.title=='Team' %} class="active" {% endif %}><a href="{{ "/pages/team" | prepend: site.baseurl }}">Team</a></li>
                 <li {% if page.title=='License' %} class="active" {% endif %}><a href="{{ "/pages/license" | prepend: site.baseurl }}">License</a></li>
-                <!--<li {% if page.sectionid=='blog' %} class="active" {% endif %}><a href="{{ site.posts.first.url | prepend: site.baseurl }}">Blog</a></li>-->
+                <li {% if page.sectionid=='blog' %} class="active" {% endif %}><a href="{{ site.posts.first.url | prepend: site.baseurl }}">Blog</a></li>
             </ul>
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">
