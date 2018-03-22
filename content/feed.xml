@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://nemo.apache.org//feed.xml" rel="self" type="application/atom+xml" /><link href="http://nemo.apache.org//" rel="alternate" type="text/html" /><updated>2018-03-20T16:53:35+09:00</updated><id>http://nemo.apache.org//</id><title type="html">Nemo</title><subtitle>A Data Processing System for Flexible Employment With Different Deployment Characteristics.
-</subtitle><entry><title type="html">Nemo blog published!</title><link href="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/" rel="alternate" type="text/html" title="Nemo blog published!" /><published>2018-03-20T00:00:00+09:00</published><updated>2018-03-20T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2018/03/20/nemo-blog-published</id><content type="html" xml:base="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/">&lt;p&gt;Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://nemo.apache.org//feed.xml" rel="self" type="application/atom+xml" /><link href="http://nemo.apache.org//" rel="alternate" type="text/html" /><updated>2018-03-23T01:20:55+09:00</updated><id>http://nemo.apache.org//</id><title type="html">Nemo</title><subtitle>A Data Processing System for Flexible Employment With Different Deployment Characteristics.
+</subtitle><entry><title type="html">Optimizing shuffle performance using Nemo</title><link href="http://nemo.apache.org//blog/2018/03/23/shuffle-on-nemo/" rel="alternate" type="text/html" title="Optimizing shuffle performance using Nemo" /><published>2018-03-23T00:00:00+09:00</published><updated>2018-03-23T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2018/03/23/shuffle-on-nemo</id><content type="html" xml:base="http://nemo.apache.org//blog/2018/03/23/shuffle-on-nemo/">&lt;p&gt;Data shuffle is a key operation that underlies almost all large-scale data processing jobs. A shuffle operation typically involves writing intermediate data to disk, and reading the data back later when the successive computations are scheduled.&lt;/p&gt;
 
-&lt;p&gt;Your contribution is welcome!&lt;/p&gt;</content><author><name>wonook</name></author><summary type="html">Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.</summary></entry></feed>
+&lt;p&gt;Sailfish[1] is an optimization technique that reduces disk overheads associated with a shuffle operation. Specifically, Sailfish minimizes the number of disk seeks involved in reading intermediate data back from disk. Jobs that handle large volumes of data can especially benefit from the Sailfish technique.&lt;/p&gt;
+
+&lt;p&gt;Nemo provides an optimization policy interface that makes it easy for users to employ techniques like Sailfish to improve application performance. To demonstrate the flexibility of Nemo, we have developed and evaluated SailfishPolicy. We summarize preliminary evaluation results as follows.&lt;/p&gt;
+
+&lt;h3 id=&quot;experimentation-setup&quot;&gt;Experimentation setup&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Systems: Spark[2] 2.3.0 (a state-of-the-art system), and Nemo with SailfishPolicy&lt;/li&gt;
+  &lt;li&gt;Resources: 20 h1.4xlarge (16 vCPU, 64GB memory, 2 HDDs) AWS instances
+    &lt;ul&gt;
+      &lt;li&gt;One of the disk is used by a HDFS cluster, and the other is used as a scratch disk by Nemo and Spark for maintaining intermediate data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dataset: 2TB Wikipedia pageview statistics[3] stored in the HDFS cluster&lt;/li&gt;
+  &lt;li&gt;Application: A MapReduce application that reads input data from HDFS, computes the sum of pageview counts per Wikipedia project, and writes the results to HDFS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;job-completion-time-jct&quot;&gt;Job completion time (JCT)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/6691311/37783061-d7c62970-2e37-11e8-89d5-9ef3da8fd846.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure 1&lt;/center&gt;
+
+&lt;p&gt;As shown in Figure 1, Nemo outperforms Spark by 2.26X primarily because Nemo’s reduce stage completes faster than Spark’s.&lt;/p&gt;
+
+&lt;h3 id=&quot;mean-disk-throughput-mbs&quot;&gt;Mean disk throughput (MB/s)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/6691311/37783098-f17b55d4-2e37-11e8-9cf3-bf082562c1e6.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure 2&lt;/center&gt;
+
+&lt;p&gt;To understand the performance difference, we’ve measured the mean throughput of the scratch disks that Nemo and Spark use for handling intermediate data. As depicted in Figure 2, Nemo’s reduce stage enjoys much higher disk read throughput with a smaller number of disk seeks. This explains why Nemo’s reduce stage was able to complete more quickly, and validates the effectiveness of SailfishPolicy.&lt;/p&gt;
+
+&lt;p&gt;[1] RAO, S., RAMAKRISHNAN, R., SILBERSTEIN, A., OVSIANNIKOV, M., AND REEVES, D. Sailfish: A framework for large scale data processing. In SOCC (2012).&lt;/p&gt;
+
+&lt;p&gt;[2] Apache Spark. https://spark.apache.org/.&lt;/p&gt;
+
+&lt;p&gt;[3] Wikipedia pageview statistics. https://dumps.wikimedia.org/other/pagecounts-raw/.&lt;/p&gt;</content><author><name>John Yang</name></author><summary type="html">Data shuffle is a key operation that underlies almost all large-scale data processing jobs. A shuffle operation typically involves writing intermediate data to disk, and reading the data back later when the successive computations are scheduled.</summary></entry><entry><title type="html">Nemo blog published!</title><link href="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/" rel="alternate" type="text/html" title="Nemo blog published!" /><published>2018-03-20T00:00:00+09:00</published><updated>2018-03-20T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2018/03/20/nemo-blog-published</id><content type="html" xml:base="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/">&lt;p&gt;Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.&lt;/p&gt;
+
+&lt;p&gt;Your contribution is welcome!&lt;/p&gt;</content><author><name>Won Wook SONG</name></author><summary type="html">Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.</summary></entry></feed>
