@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Harnessing transient resources using Nemo</title>
+    <meta name="description" content="To increase datacenter utilization, data processing jobs are increasingly being deployed on transient resources temporarily borrowed from latency-critical jo...">
+
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Harnessing transient resources using Nemo | Nemo</title>
+<meta property="og:title" content="Harnessing transient resources using Nemo" />
+<meta name="author" content="John Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="To increase datacenter utilization, data processing jobs are increasingly being deployed on transient resources temporarily borrowed from latency-critical jobs. However, these transient resources must be evicted whenever latency-critical jobs require them again. Resource evictions often lead to cascading recomputations that substantially degrade job performance." />
+<meta property="og:description" content="To increase datacenter utilization, data processing jobs are increasingly being deployed on transient resources temporarily borrowed from latency-critical jobs. However, these transient resources must be evicted whenever latency-critical jobs require them again. Resource evictions often lead to cascading recomputations that substantially degrade job performance." />
+<link rel="canonical" href="http://nemo.apache.org//blog/2018/03/23/pado-on-nemo/" />
+<meta property="og:url" content="http://nemo.apache.org//blog/2018/03/23/pado-on-nemo/" />
+<meta property="og:site_name" content="Nemo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-03-23T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"To increase datacenter utilization, data processing jobs are increasingly being deployed on transient resources temporarily borrowed from latency-critical jobs. However, these transient resources must be evicted whenever latency-critical jobs require them again. Resource evictions often lead to cascading recomputations that substantially degrade job performance.","author":{"@type":"Person","name":"John Yang"},"@type":"BlogPosting","url":"http://nemo.apache.org//blog/2018/03/23/pado-on-nemo/","publisher":null,"image":null,"headline":"Harnessing transient resources using Nemo","dateModified":"2018-03-23T00:00:00+09:00","datePublished":"2018-03-23T00:00:00+09:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://nemo.apache.org//blog/2018/03/23/pado-on-nemo/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://nemo.apache.org//blog/2018/03/23/pado-on-nemo/">
+    <link rel="alternate" type="application/rss+xml" title="Nemo" href="http://nemo.apache.org//feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/nemo-logo.png"></span>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/docs/home/">Docs</a></li>
+                <li ><a href="/apidocs">APIs</a></li>
+                <li ><a href="/pages/downloads">Downloads</a></li>
+                <li ><a href="/pages/talks">Talks</a></li>
+                <li ><a href="/pages/team">Team</a></li>
+                <li ><a href="/pages/license">License</a></li>
+                <li  class="active" ><a href="/blog/2018/03/23/shuffle-on-nemo/">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/apache/incubator-nemo-website"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/blog/2018/03/23/shuffle-on-nemo/" >Optimizing shuffle performance using Nemo</a></li>
+                    
+                    <li><a href="/blog/2018/03/23/pado-on-nemo/"  class="active" >Harnessing transient resources using Nemo</a></li>
+                    
+                    <li><a href="/blog/2018/03/20/nemo-blog-published/" >Nemo blog published!</a></li>
+                    
+                    <li><a href="/allposts">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>Harnessing transient resources using Nemo</h1>
+            <p>Mar 23, 2018 • John Yang</p>
+            <div  id="markdown-content-container"><p>To increase datacenter utilization, data processing jobs are increasingly being deployed on transient resources temporarily borrowed from latency-critical jobs. However, these transient resources must be evicted whenever latency-critical jobs require them again. Resource evictions often lead to cascading recomputations that substantially degrade job performance.</p>
+
+<p>Pado[1] is an optimization technique that reduces the number of recomputations triggered by eviction of transient resources. Specifically, Pado uses a placement algorithm for selectively retaining intermediate results on reserved resources that are not evicted.</p>
+
+<p>Nemo provides an optimization policy interface that makes it easy for users to employ techniques like Pado to improve application performance. To demonstrate the flexibility of Nemo, we have developed and evaluated PadoPolicy. We summarize preliminary evaluation results as follows.</p>
+
+<h3 id="experimentation-setup">Experimentation setup</h3>
+
+<ul>
+  <li>Systems: Spark 2.2.0, Nemo with PadoPolicy</li>
+  <li>Resources:
+    <ul>
+      <li>m4.2xlarge AWS EC2 instances (8 vCPU, 32GB memory)</li>
+      <li>35 transient nodes, and 5 reserved nodes
+        <ul>
+          <li>5-minute mean poisson eviction rate for each transient node</li>
+          <li>An evicted transient node is immediately replaced with a new transient node</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Dataset: 10GB Yahoo! music ratings dataset[2]</li>
+  <li>Application: A machine learning recommendation algorithm (Alternating least squares)</li>
+</ul>
+
+<h3 id="job-completion-time-jct">Job completion time (JCT)</h3>
+
+<p>Spark was not able to complete the job even after running for 120 minutes, because it was stuck repeatedly recomputing intermediate results that are lost due to eviction. In contrast, Nemo completed in 18 minutes by selectively retaining intermediate results on reserved nodes using the Pado technique.</p>
+
+<p>[1] Youngseok Yang, Geon-Woo Kim, Won Wook Song, Yunseong Lee, Andrew Chung, Zhengping Qian, Brian Cho, and Byung-Gon Chun. 2017. Pado: A Data Processing Engine for Harnessing Transient Resources in Datacenters. In Proceedings of the Twelfth European Conference on Computer Systems (EuroSys ‘17).</p>
+
+<p>[2] Yahoo! Music User Ratings of Songs with Artist, Album, and Genre Meta Information, v. 1.0. https://webscope. sandbox.yahoo.com/catalog.php?datatype=r.</p>
+
+</div>
+            <hr>
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/blog/2018/03/20/nemo-blog-published/">
+                        <span aria-hidden="true">&larr;</span> Older
+                    </a>
+                </li>
+                 
+                <li class="next">
+                    <a href="/blog/2018/03/23/shuffle-on-nemo/">
+                      Newer <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Nemo 2018 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+</body>
+
+</html>

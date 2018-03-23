@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://nemo.apache.org//feed.xml" rel="self" type="application/atom+xml" /><link href="http://nemo.apache.org//" rel="alternate" type="text/html" /><updated>2018-03-23T01:20:55+09:00</updated><id>http://nemo.apache.org//</id><title type="html">Nemo</title><subtitle>A Data Processing System for Flexible Employment With Different Deployment Characteristics.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://nemo.apache.org//feed.xml" rel="self" type="application/atom+xml" /><link href="http://nemo.apache.org//" rel="alternate" type="text/html" /><updated>2018-03-23T10:54:39+09:00</updated><id>http://nemo.apache.org//</id><title type="html">Nemo</title><subtitle>A Data Processing System for Flexible Employment With Different Deployment Characteristics.
 </subtitle><entry><title type="html">Optimizing shuffle performance using Nemo</title><link href="http://nemo.apache.org//blog/2018/03/23/shuffle-on-nemo/" rel="alternate" type="text/html" title="Optimizing shuffle performance using Nemo" /><published>2018-03-23T00:00:00+09:00</published><updated>2018-03-23T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2018/03/23/shuffle-on-nemo</id><content type="html" xml:base="http://nemo.apache.org//blog/2018/03/23/shuffle-on-nemo/">&lt;p&gt;Data shuffle is a key operation that underlies almost all large-scale data processing jobs. A shuffle operation typically involves writing intermediate data to disk, and reading the data back later when the successive computations are scheduled.&lt;/p&gt;
 
 &lt;p&gt;Sailfish[1] is an optimization technique that reduces disk overheads associated with a shuffle operation. Specifically, Sailfish minimizes the number of disk seeks involved in reading intermediate data back from disk. Jobs that handle large volumes of data can especially benefit from the Sailfish technique.&lt;/p&gt;
@@ -32,10 +32,41 @@
 
 &lt;p&gt;To understand the performance difference, we’ve measured the mean throughput of the scratch disks that Nemo and Spark use for handling intermediate data. As depicted in Figure 2, Nemo’s reduce stage enjoys much higher disk read throughput with a smaller number of disk seeks. This explains why Nemo’s reduce stage was able to complete more quickly, and validates the effectiveness of SailfishPolicy.&lt;/p&gt;
 
-&lt;p&gt;[1] RAO, S., RAMAKRISHNAN, R., SILBERSTEIN, A., OVSIANNIKOV, M., AND REEVES, D. Sailfish: A framework for large scale data processing. In SOCC (2012).&lt;/p&gt;
+&lt;p&gt;[1] Sriram Rao, Raghu Ramakrishnan, Adam Silberstein, Mike Ovsiannikov, and Damian Reeves. 2012. Sailfish: a framework for large scale data processing. In Proceedings of the Third ACM Symposium on Cloud Computing (SoCC ‘12).&lt;/p&gt;
 
 &lt;p&gt;[2] Apache Spark. https://spark.apache.org/.&lt;/p&gt;
 
-&lt;p&gt;[3] Wikipedia pageview statistics. https://dumps.wikimedia.org/other/pagecounts-raw/.&lt;/p&gt;</content><author><name>John Yang</name></author><summary type="html">Data shuffle is a key operation that underlies almost all large-scale data processing jobs. A shuffle operation typically involves writing intermediate data to disk, and reading the data back later when the successive computations are scheduled.</summary></entry><entry><title type="html">Nemo blog published!</title><link href="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/" rel="alternate" type="text/html" title="Nemo blog published!" /><published>2018-03-20T00:00:00+09:00</published><updated>2018-03-20T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2018/03/20/nemo-blog-published</id><content type="html" xml:base="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/">&lt;p&gt;Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.&lt;/p&gt;
+&lt;p&gt;[3] Wikipedia pageview statistics. https://dumps.wikimedia.org/other/pagecounts-raw/.&lt;/p&gt;</content><author><name>John Yang</name></author><summary type="html">Data shuffle is a key operation that underlies almost all large-scale data processing jobs. A shuffle operation typically involves writing intermediate data to disk, and reading the data back later when the successive computations are scheduled.</summary></entry><entry><title type="html">Harnessing transient resources using Nemo</title><link href="http://nemo.apache.org//blog/2018/03/23/pado-on-nemo/" rel="alternate" type="text/html" title="Harnessing transient resources using Nemo" /><published>2018-03-23T00:00:00+09:00</published><updated>2018-03-23T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2018/03/23/pado-on-nemo</id><content type="html" xml:base="http://nemo.apache.org//blog/2018/03/23/pado-on-nemo/">&lt;p&gt;To increase datacenter utilization, data processing jobs are increasingly being deployed on transient resources temporarily borrowed from latency-critical jobs. However, these transient resources must be evicted whenever latency-critical jobs require them again. Resource evictions often lead to cascading recomputations that substantially degrade job performance.&lt;/p&gt;
+
+&lt;p&gt;Pado[1] is an optimization technique that reduces the number of recomputations triggered by eviction of transient resources. Specifically, Pado uses a placement algorithm for selectively retaining intermediate results on reserved resources that are not evicted.&lt;/p&gt;
+
+&lt;p&gt;Nemo provides an optimization policy interface that makes it easy for users to employ techniques like Pado to improve application performance. To demonstrate the flexibility of Nemo, we have developed and evaluated PadoPolicy. We summarize preliminary evaluation results as follows.&lt;/p&gt;
+
+&lt;h3 id=&quot;experimentation-setup&quot;&gt;Experimentation setup&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Systems: Spark 2.2.0, Nemo with PadoPolicy&lt;/li&gt;
+  &lt;li&gt;Resources:
+    &lt;ul&gt;
+      &lt;li&gt;m4.2xlarge AWS EC2 instances (8 vCPU, 32GB memory)&lt;/li&gt;
+      &lt;li&gt;35 transient nodes, and 5 reserved nodes
+        &lt;ul&gt;
+          &lt;li&gt;5-minute mean poisson eviction rate for each transient node&lt;/li&gt;
+          &lt;li&gt;An evicted transient node is immediately replaced with a new transient node&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dataset: 10GB Yahoo! music ratings dataset[2]&lt;/li&gt;
+  &lt;li&gt;Application: A machine learning recommendation algorithm (Alternating least squares)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;job-completion-time-jct&quot;&gt;Job completion time (JCT)&lt;/h3&gt;
+
+&lt;p&gt;Spark was not able to complete the job even after running for 120 minutes, because it was stuck repeatedly recomputing intermediate results that are lost due to eviction. In contrast, Nemo completed in 18 minutes by selectively retaining intermediate results on reserved nodes using the Pado technique.&lt;/p&gt;
+
+&lt;p&gt;[1] Youngseok Yang, Geon-Woo Kim, Won Wook Song, Yunseong Lee, Andrew Chung, Zhengping Qian, Brian Cho, and Byung-Gon Chun. 2017. Pado: A Data Processing Engine for Harnessing Transient Resources in Datacenters. In Proceedings of the Twelfth European Conference on Computer Systems (EuroSys ‘17).&lt;/p&gt;
+
+&lt;p&gt;[2] Yahoo! Music User Ratings of Songs with Artist, Album, and Genre Meta Information, v. 1.0. https://webscope. sandbox.yahoo.com/catalog.php?datatype=r.&lt;/p&gt;</content><author><name>John Yang</name></author><summary type="html">To increase datacenter utilization, data processing jobs are increasingly being deployed on transient resources temporarily borrowed from latency-critical jobs. However, these transient resources must be evicted whenever latency-critical jobs require them again. Resource evictions often lead to cascading recomputations that substantially degrade job performance.</summary></entry><entry><title type="html">Nemo blog published!</title><link href="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/" rel="alternate" type="text/html" title="Nemo blog published!" /><published>2018-03-20T00:00:00+09:00</published><updated>2018-03-20T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2018/03/20/nemo-blog-published</id><content type="html" xml:base="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/">&lt;p&gt;Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.&lt;/p&gt;
 
 &lt;p&gt;Your contribution is welcome!&lt;/p&gt;</content><author><name>Won Wook SONG</name></author><summary type="html">Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.</summary></entry></feed>

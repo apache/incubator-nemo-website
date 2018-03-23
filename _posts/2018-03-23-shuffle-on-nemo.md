@@ -40,8 +40,9 @@ To understand the performance difference, we’ve measured the mean throughput o
 
 
 
-[1] RAO, S., RAMAKRISHNAN, R., SILBERSTEIN, A., OVSIANNIKOV, M., AND REEVES, D. Sailfish: A framework for large scale data processing. In SOCC (2012).
+[1] Sriram Rao, Raghu Ramakrishnan, Adam Silberstein, Mike Ovsiannikov, and Damian Reeves. 2012. Sailfish: a framework for large scale data processing. In Proceedings of the Third ACM Symposium on Cloud Computing (SoCC '12).
 
 [2] Apache Spark. https://spark.apache.org/.
 
 [3] Wikipedia pageview statistics. https://dumps.wikimedia.org/other/pagecounts-raw/.
+
