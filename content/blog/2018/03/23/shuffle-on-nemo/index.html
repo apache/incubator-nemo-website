@@ -117,7 +117,11 @@
     </ul>
   </li>
   <li>Dataset: 2TB Wikipedia pageview statistics[3] stored in the HDFS cluster</li>
-  <li>Application: A MapReduce application that reads input data from HDFS, computes the sum of pageview counts per Wikipedia project, and writes the results to HDFS</li>
+  <li>Application: A MapReduce application that reads input data from HDFS, computes the sum of pageview counts per Wikipedia project, and writes the results to HDFS
+    <ul>
+      <li>Spark’s app is written in Spark DSL, and Nemo’s app is written in Beam</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="job-completion-time-jct">Job completion time (JCT)</h3>

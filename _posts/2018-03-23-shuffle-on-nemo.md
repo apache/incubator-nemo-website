@@ -17,6 +17,7 @@ Nemo provides an optimization policy interface that makes it easy for users to e
   - One of the disk is used by a HDFS cluster, and the other is used as a scratch disk by Nemo and Spark for maintaining intermediate data
 - Dataset: 2TB Wikipedia pageview statistics[3] stored in the HDFS cluster
 - Application: A MapReduce application that reads input data from HDFS, computes the sum of pageview counts per Wikipedia project, and writes the results to HDFS
+  - Spark's app is written in Spark DSL, and Nemo's app is written in Beam
 
 
 ### Job completion time (JCT)

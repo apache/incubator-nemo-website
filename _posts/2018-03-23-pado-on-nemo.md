@@ -21,7 +21,8 @@ Nemo provides an optimization policy interface that makes it easy for users to e
     - 5-minute mean poisson eviction rate for each transient node
     - An evicted transient node is immediately replaced with a new transient node
 - Dataset: 10GB Yahoo! music ratings dataset[2]
-- Application: A machine learning recommendation algorithm (Alternating least squares)
+- Application: A machine learning recommendation algorithm - Alternating least squares (ALS)
+  - Spark MLlib ALS implementation for Spark, and our ALS implementation written in Beam for Nemo
 
 
 ### Job completion time (JCT)
