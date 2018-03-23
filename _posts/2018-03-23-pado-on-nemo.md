@@ -26,7 +26,7 @@ Nemo provides an optimization policy interface that makes it easy for users to e
 
 ### Job completion time (JCT)
 
-Spark was not able to complete the job even after running for 120 minutes, because it was stuck repeatedly recomputing intermediate results that are lost due to eviction. In contrast, Nemo completed in 18 minutes by selectively retaining intermediate results on reserved nodes using the Pado technique.
+Spark was not able to complete the job even after running for **120 minutes**, because it was stuck repeatedly recomputing intermediate results that are lost due to eviction. In contrast, Nemo completed in **18 minutes** by selectively retaining intermediate results on reserved nodes using the Pado technique. This **6.7X speedup** validates the flexibility of Nemo.
 
 [1] Youngseok Yang, Geon-Woo Kim, Won Wook Song, Yunseong Lee, Andrew Chung, Zhengping Qian, Brian Cho, and Byung-Gon Chun. 2017. Pado: A Data Processing Engine for Harnessing Transient Resources in Datacenters. In Proceedings of the Twelfth European Conference on Computer Systems (EuroSys '17).
 
