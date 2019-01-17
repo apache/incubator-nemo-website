@@ -12,3 +12,7 @@
   docs:
   - compiler_design
   - runtime_design
+
+- title: Contribute
+  docs:
+  - contribute

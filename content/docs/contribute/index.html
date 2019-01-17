@@ -11,22 +11,22 @@
 
     <link rel="shortcut icon" href="/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Passes and Policies | Nemo</title>
-<meta property="og:title" content="Passes and Policies" />
+<title>Contribute | Nemo</title>
+<meta property="og:title" content="Contribute" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Optimization Passes" />
-<meta property="og:description" content="Optimization Passes" />
-<link rel="canonical" href="http://nemo.apache.org//docs/passes_and_policies/" />
-<meta property="og:url" content="http://nemo.apache.org//docs/passes_and_policies/" />
+<meta name="description" content="Contribute" />
+<meta property="og:description" content="Contribute" />
+<link rel="canonical" href="http://nemo.apache.org//docs/contribute/" />
+<meta property="og:url" content="http://nemo.apache.org//docs/contribute/" />
 <meta property="og:site_name" content="Nemo" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-17T18:48:47+09:00" />
 <script type="application/ld+json">
-{"url":"http://nemo.apache.org//docs/passes_and_policies/","headline":"Passes and Policies","dateModified":"2019-01-17T18:48:47+09:00","datePublished":"2019-01-17T18:48:47+09:00","sameAs":null,"image":null,"mainEntityOfPage":null,"author":null,"description":"Optimization Passes","publisher":null,"name":null,"@type":"WebPage","@context":"http://schema.org"}</script>
+{"url":"http://nemo.apache.org//docs/contribute/","headline":"Contribute","dateModified":"2019-01-17T18:48:47+09:00","datePublished":"2019-01-17T18:48:47+09:00","sameAs":null,"image":null,"mainEntityOfPage":null,"author":null,"description":"Contribute","publisher":null,"name":null,"@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="http://nemo.apache.org//docs/passes_and_policies/">
+    <link rel="canonical" href="http://nemo.apache.org//docs/contribute/">
     <link rel="alternate" type="application/rss+xml" title="Nemo" href="http://nemo.apache.org//feed.xml" />
 </head>
 
@@ -119,7 +119,7 @@
         
           
           
-          <a class="list-group-item active" href="/docs/passes_and_policies/">Passes and Policies</a>
+          <a class="list-group-item " href="/docs/passes_and_policies/">Passes and Policies</a>
         
       </div>
     </div>
@@ -161,7 +161,7 @@
         
           
           
-          <a class="list-group-item " href="/docs/contribute/">Contribute</a>
+          <a class="list-group-item active" href="/docs/contribute/">Contribute</a>
         
       </div>
     </div>
@@ -172,69 +172,20 @@
         </div>
 
         <div class="col-md-8">
-            <h1>Passes and Policies</h1>
-            <div id="markdown-content-container"><h3 id="optimization-passes">Optimization Passes</h3>
+            <h1>Contribute</h1>
+            <div id="markdown-content-container"><h3 id="contribute">Contribute</h3>
 
-<p>The <a href="../ir">Nemo IR</a> can be flexibly modified, both in its logical structure and annotations, through an interface called <em>Nemo optimization pass</em>.
-An <em>optimization pass</em> is basically a function that takes an <em>Nemo IR</em> and outputs an optimized <em>Nemo IR</em>.</p>
+<p>The documentations related to contribution can be found in our GitHub repository. Below are the links for the corresponding documents.</p>
 
-<h5 id="compile-time-passes">Compile-time passes</h5>
-
-<p>The modification during compile-time can be categorized in different ways:</p>
-
-<ol>
-  <li><strong>Reshaping passes</strong> modify the shape of the IR itself by inserting, regrouping, or deleting IR vertices and edges on an Nemo IR, such as collecting repetitive vertices inside a single loop or inserting metric vertices. This modifies the logical notion of data processing applications.</li>
-  <li><strong>Annotating passes</strong> annotate IR vertices and edges with <em>execution properties</em> with the provided logic to adjust and run the workload in the fashion that the user wants.</li>
-  <li><strong>Composite passes</strong> are collections of passes that are grouped together for convenience.</li>
-</ol>
-
-<h5 id="run-time-passes">Run-time passes</h5>
-
-<p>After the compilation and compile-time optimizations, the <em>Nemo IR</em> gets laid out as a <em>physical execution plan</em> to be submitted to and executed by the <em>Nemo Execution Runtime</em>.
-While execution, an <em>run-time optimization pass</em> can be performed to perform dynamic optimizations, like solving data skew, using runtime statistics.
-It takes the old <em>Nemo IR</em> and metric data of runtime statistics, and sends the newly optimized Nemo IR to execution runtime for the physical plan to be updated accordingly.</p>
-
-<h3 id="examples">Examples</h3>
-
-<p>Below are some example optimization passes that are used for different use cases:</p>
-
-<h4 id="compile-time-passes-1">Compile-time passes</h4>
-<p><strong>Reshaping passes</strong>:</p>
 <ul>
-  <li>Common subexpression elimination (CSE): to refactor the commonly occurring operation that unnecessarily computes multiple times.</li>
-  <li>Loop invariant code motion (LICM): to extract an operation that does not need to be repetitively done iteratively from a loop.</li>
-  <li>Loop Extraction: to observe the DAG structure and extract the repetitive workflow that can be refactored into a loop.</li>
-  <li>Data Skew - Metric vertex insertion: to insert a vertex that indicated where to collect metrics and trigger data skew runtime optimization.</li>
+  <li><a href="https://github.com/apache/incubator-nemo/blob/master/.github/CONTRIBUTING.md">Contributor Guide</a></li>
+  <li><a href="https://github.com/apache/incubator-nemo/blob/master/.github/COMMITTING.md">Committer Guide</a></li>
+  <li><a href="https://github.com/apache/incubator-nemo/blob/master/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
 </ul>
-
-<p><strong>Annotating passes</strong>:</p>
-<ul>
-  <li>Parallelism: to determine computational parallelism of each vertices by observing source data size and parallelism information of previous vertices</li>
-  <li>Executor placement: to allocate different computations on specific types of resources.</li>
-</ul>
-
-<h4 id="run-time-passes-1">Run-time passes</h4>
-<ul>
-  <li>Data-skew: to evenly re-distribute skewed data into a more evenly-distributed partitions of data.</li>
-</ul>
-
-<h3 id="optimization-policies">Optimization Policies</h3>
-
-<p>An <strong>optimization policy</strong> is composed of a specific combination of optimization passes.</p>
-
-<p>Using a carefully chosen series of <em>optimization passes</em>, we can optimize an application to exploit specific <em>deployement characteristics</em>, by providing appropriate configurations and plan for the execution runtime.
-A complete series of optimization passes is called a <em>policy</em>, which together performs a specific goal.</p>
-
-<p>For example, to optimize an application to run on evictable transient resources, we can use a specialized executor placement pass, that places computations appropriately on different types of resources, 
-and data flow model pass, that determines the fashion in which each computation should fetch its input data, with a number of other passes for further optimization.</p>
-
-<p>Using different optimization policies for specific goals enables users to flexibly customize and perform data processing for different deployment characteristics.
-This greatly simplifies the work by replacing the work of exploring and rewriting system internals for modifying runtime behaviors with a simple process of using pluggable policies.
-It also makes it possible for the system to promptly meet new requirements through <a href="../extending_Nemo">easy extension of system capabilities</a>.</p>
 </div>
             <p class="text-center">
               <br />
-              <a target="_blank" href="https://github.com/apache/incubator-nemo-website/tree/asf-site/_docs/optimization/passes_and_policies.md" class="btn btn-default btn-sm githubEditButton" role="button">
+              <a target="_blank" href="https://github.com/apache/incubator-nemo-website/tree/asf-site/_docs/contribute.md" class="btn btn-default btn-sm githubEditButton" role="button">
                 <i class="fa fa-pencil"></i> Improve this page
               </a>
             </p>
@@ -256,22 +207,29 @@ It also makes it possible for the system to promptly meet new requirements throu
 
   
   
+
+  
+  
+
+  
+  
+
+  
+  
     <ul class="pager">
       
         
         
         <li class="previous">
-          <a href="/docs/ir/">
+          <a href="/docs/runtime_design/">
             <span aria-hidden="true">&larr;</span> Previous
           </a>
         </li>
       
 
       
-        
-        
-        <li class="next">
-          <a href="/docs/compiler_design/">
+        <li class="next disabled">
+          <a>
             Next <span aria-hidden="true">&rarr;</span>
           </a>
         </li>
