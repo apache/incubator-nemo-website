@@ -15,6 +15,8 @@ To solve this problem and easily modify *runtime behaviors* for different *deplo
 These layers can be easily modified through a set of high-level [graph pass](../passes_and_policies) interfaces, exposed by the [Nemo Compiler](../compiler_design), enabling users to flexibly modify *runtime behaviors* at both compile-time and runtime.
 Works represented this way can be executed by the [Nemo Execution Runtime](../runtime_design) through its [modular and extensible](../extending_Nemo) design.
 
+If you want to contribute, please refer to the [contribute](../contribute) page. Otherwise, hit the button below to get started with Nemo!
+
 <br>
 <div class="text-center">
     <a href="../getting_started/" class="btn btn-default btn-lg">Get Started!</a>
