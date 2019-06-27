@@ -18,8 +18,8 @@
 
 set -e
 
-bundle exec jekyll clean -d content
-bundle exec jekyll build -d content
+bundler exec jekyll clean -d content
+bundler exec jekyll build -d content
 
 COMMIT_HASH=`git rev-parse HEAD`
 git checkout asf-site
