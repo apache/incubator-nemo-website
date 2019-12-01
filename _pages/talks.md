@@ -4,6 +4,13 @@ title:  Talks
 permalink: /pages/talks/
 ---
 
+### Apache Nemo: A Framework for Building Distributed Dataflow Optimization Policies (ATC 2019 Conference)[(link)](https://www.usenix.org/conference/atc19/presentation/yang-youngseok)
+
+<center>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ZvSFcJlJQng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/JKNBDQmUBA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
 ### Running Apache Beam programs on Apache Nemo (Beam Summit Europe 2019) [(link)](https://youtu.be/DKxYE8YWF_o)
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/DKxYE8YWF_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
