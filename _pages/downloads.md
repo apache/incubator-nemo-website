@@ -8,7 +8,7 @@ permalink: /pages/downloads/
 
 | Release version | Download link |
 | --------------- | ------------: |
-| 0.1 | [Source code (zip)](https://github.com/apache/incubator-nemo/archive/v0.1.zip) / [Source code (tar.gz)](https://github.com/apache/incubator-nemo/archive/v0.1.tar.gz) |
+| 0.1 ([Signature](https://dist.apache.org/repos/dist/dev/incubator/nemo/0.1-incubating/apache-nemo-0.1-incubating-rc2.tar.gz.asc) / [Checksums](https://dist.apache.org/repos/dist/dev/incubator/nemo/0.1-incubating/apache-nemo-0.1-incubating-rc2.tar.gz.sha512) / [Project release KEYS](https://dist.apache.org/repos/dist/dev/incubator/nemo/KEYS)) | [Source code (zip)](https://github.com/apache/incubator-nemo/archive/v0.1.zip) / [Source code (tar.gz)](https://github.com/apache/incubator-nemo/archive/v0.1.tar.gz) |
 
 
 ## Development and Maintenance Branches
