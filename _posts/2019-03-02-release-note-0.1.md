@@ -4,12 +4,11 @@ title:  "Nemo Release 0.1"
 author: Won Wook SONG
 ---
 
-# Nemo Release 0.1
 
 Nemo 0.1 is an initial release that brings several features and performance enhancements. The most visible features are the frontend support for Beam and Spark; IR DAG with execution properties, optimization passes and policies; support for loops;  dynamic optimization; multiple-job submission; and various features of the execution runtime.
 
 
-You can view the JIRA-generated release note here: https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12321823&version=12344546.
+You can view the JIRA-generated release note here: [link](https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12321823&version=12344546).
 
 
 ## New features / Improvements
@@ -17,7 +16,7 @@ You can view the JIRA-generated release note here: https://issues.apache.org/jir
 ### Frontend
 
 - Beam
-- Official Support for Apache Beam (details available on https://beam.apache.org/documentation/runners/nemo/)
+- Official Support for Apache Beam (details available on [this link](https://beam.apache.org/documentation/runners/nemo/))
 - Spark
 
 ### Core
@@ -70,27 +69,27 @@ Nemo is available in Maven Central, making it easier to link into your programs 
 
 Nemo 0.1 was the work of many contributors:
 
-Arun Lakshman R
-Byung-Gon Chun
-Davor Bonaci
-Eunji Jeong
-Geon Woo Kim
-Gyewon Lee
-Jae Hyeon Park
-JangHo Seo
-Jangho Seo
-Jean-Baptiste Onofré
-Jeongyoon Eo
-John Yang
-Joo Yeon Kim
-Kenn Knowles
-Markus Weimer
-Minhyeok Kweun
-Sanha Lee
-Seonghyun Park
-Soojeong Kim
-Taegeon Um
-Won Wook SONG
-WooYeon Lee
-Yunseong Lee
+- Arun Lakshman R
+- Byung-Gon Chun
+- Davor Bonaci
+- Eunji Jeong
+- Geon Woo Kim
+- Gyewon Lee
+- Jae Hyeon Park
+- JangHo Seo
+- Jangho Seo
+- Jean-Baptiste Onofré
+- Jeongyoon Eo
+- John Yang
+- Joo Yeon Kim
+- Kenn Knowles
+- Markus Weimer
+- Minhyeok Kweun
+- Sanha Lee
+- Seonghyun Park
+- Soojeong Kim
+- Taegeon Um
+- Won Wook SONG
+- WooYeon Lee
+- Yunseong Lee
 
