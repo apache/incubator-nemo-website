@@ -67,6 +67,11 @@
 
   
   {
+  "title": "Nemo Release 0.1",
+  "url": "/blog/2019/03/02/release-note-0.1/"
+  },
+  
+  {
   "title": "Optimizing shuffle performance using Nemo",
   "url": "/blog/2018/03/23/shuffle-on-nemo/"
   },
