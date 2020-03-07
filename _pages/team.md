@@ -22,10 +22,10 @@ sending an e-mail to dev@ after subscription.
 | jeongyoon | Jeongyoon Eo | Seoul National University |
 | jglee | Jung-Gil Lee | Google |
 | johnyangk | Youngseok Yang | Seoul National University |
-| jooykim | Joo Yeon Kim | Samsung Research |
-| sanha | Sanha Lee | Seoul National University |
+| jooykim | Joo Yeon Kim | Samsung Electronics |
+| sanha | Sanha Lee | Naver |
 | taegeonum | Taegeon Um | Seoul National University |
 | wonook | Won Wook SONG | Seoul National University |
-| wylee | Wooyeon Lee | Samsung Research |
+| wylee | Wooyeon Lee | Samsung Electronics |
 | yunseong | Yunseong Lee | Qualcomm AI Research |
 
