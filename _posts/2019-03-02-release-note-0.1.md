@@ -90,6 +90,6 @@ Nemo 0.1 was the work of many contributors:
 - Soojeong Kim
 - Taegeon Um
 - Won Wook SONG
-- WooYeon Lee
+- Wooyeon Lee
 - Yunseong Lee
 
