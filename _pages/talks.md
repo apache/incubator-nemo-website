@@ -6,7 +6,11 @@ permalink: /pages/talks/
 
 ### Flexible Optimizations and Efficient Execution of Data Processing on Apache Nemo (ApacheCon Asia 2021)[(link)](https://youtu.be/lFCuiL9ZRWk)
 
-<center><iframe width="560" height="315" src="https://youtu.be/lFCuiL9ZRWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+
+<center>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/lFCuiL9ZRWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 
 ### Apache Nemo: A Framework for Building Distributed Dataflow Optimization Policies (ATC 2019 Conference)[(link)](https://www.usenix.org/conference/atc19/presentation/yang-youngseok)
@@ -26,7 +30,9 @@ permalink: /pages/talks/
 
 ### 아파치 네모로 빠르고 효율적으로 빅데이터 처리하기 (Naver tech talk) [(link)](https://youtu.be/Gc4-o8n762I)
 
-<center><iframe width="560" height="315" src="https://youtu.be/Gc4-o8n762I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Gc4-o8n762I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 
 ### Onyx: A Flexible and Extensible Data Processing System, Deview 2017 (In Korean) [(link)](https://deview.kr/2017/schedule/197) (Later renamed to Nemo)
