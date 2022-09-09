@@ -1,0 +1,14 @@
+# See https://cwiki.apache.org/confluence/display/INFRA/Git+-+.asf.yaml+features#Git.asf.yamlfeatures-Importantnotesbeforeyoustartusing.asf.yaml
+
+# Staging and publishing profile for yourproject-website.git:
+staging:
+  profile: ~
+  whoami:  asf-staging
+ 
+publish:
+  whoami:  asf-site
+
+# jekyll:
+  # whoami: jekyll-source-branch
+  # target: asf-staging-jekyll       # output branches need to be asf-site OR asf-staging*
+#  outputdir: outputdir            # MAY be needed, but generally can be left out
