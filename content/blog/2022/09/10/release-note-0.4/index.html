@@ -12,26 +12,26 @@
 
     <link rel="shortcut icon" href="/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Nemo blog published! | Nemo</title>
+<title>Nemo Release 0.4 | Nemo</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="Nemo blog published!" />
+<meta property="og:title" content="Nemo Release 0.4" />
 <meta name="author" content="Won Wook SONG" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Our blog is published and is online! We’ll be posting exciting news related to our project on our blog." />
-<meta property="og:description" content="Our blog is published and is online! We’ll be posting exciting news related to our project on our blog." />
-<link rel="canonical" href="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/" />
-<meta property="og:url" content="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/" />
+<meta name="description" content="Release Notes - Apache Nemo - Version 0.4" />
+<meta property="og:description" content="Release Notes - Apache Nemo - Version 0.4" />
+<link rel="canonical" href="http://nemo.apache.org//blog/2022/09/10/release-note-0.4/" />
+<meta property="og:url" content="http://nemo.apache.org//blog/2022/09/10/release-note-0.4/" />
 <meta property="og:site_name" content="Nemo" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-03-20T00:00:00+09:00" />
+<meta property="article:published_time" content="2022-09-10T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Nemo blog published!" />
+<meta property="twitter:title" content="Nemo Release 0.4" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Won Wook SONG"},"dateModified":"2018-03-20T00:00:00+09:00","datePublished":"2018-03-20T00:00:00+09:00","description":"Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.","headline":"Nemo blog published!","mainEntityOfPage":{"@type":"WebPage","@id":"http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/"},"url":"http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Won Wook SONG"},"dateModified":"2022-09-10T00:00:00+09:00","datePublished":"2022-09-10T00:00:00+09:00","description":"Release Notes - Apache Nemo - Version 0.4","headline":"Nemo Release 0.4","mainEntityOfPage":{"@type":"WebPage","@id":"http://nemo.apache.org//blog/2022/09/10/release-note-0.4/"},"url":"http://nemo.apache.org//blog/2022/09/10/release-note-0.4/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="http://nemo.apache.org//blog/2018/03/20/nemo-blog-published/">
+    <link rel="canonical" href="http://nemo.apache.org//blog/2022/09/10/release-note-0.4/">
     <link rel="alternate" type="application/rss+xml" title="Nemo" href="http://nemo.apache.org//feed.xml" />
 </head>
 
@@ -87,7 +87,7 @@
                 <h4>RECENT POSTS</h4>
                 <ul class="list-unstyled post-list-container">
                     
-                    <li><a href="/blog/2022/09/10/release-note-0.4/" >Nemo Release 0.4</a></li>
+                    <li><a href="/blog/2022/09/10/release-note-0.4/"  class="active" >Nemo Release 0.4</a></li>
                     
                     <li><a href="/blog/2022/06/07/release-note-0.3/" >Nemo Release 0.3</a></li>
                     
@@ -99,7 +99,7 @@
                     
                     <li><a href="/blog/2018/03/23/pado-on-nemo/" >Harnessing transient resources using Nemo</a></li>
                     
-                    <li><a href="/blog/2018/03/20/nemo-blog-published/"  class="active" >Nemo blog published!</a></li>
+                    <li><a href="/blog/2018/03/20/nemo-blog-published/" >Nemo blog published!</a></li>
                     
                     <li><a href="/allposts">All posts ...</a></li>
                 </ul>
@@ -107,21 +107,92 @@
         </div>
 
         <div class="col-md-8">
-            <h1>Nemo blog published!</h1>
-            <p>Mar 20, 2018 • Won Wook SONG</p>
-            <div  id="markdown-content-container"><p>Our blog is published and is online! We’ll be posting exciting news related to our project on our blog.</p>
+            <h1>Nemo Release 0.4</h1>
+            <p>Sep 10, 2022 • Won Wook SONG</p>
+            <div  id="markdown-content-container"><p>Release Notes - Apache Nemo - Version 0.4</p>
 
-<p>Your contribution is welcome!</p>
+<h3 id="heres-a-brief-summary-about-the-release">Here’s a brief summary about the release:</h3>
+
+<ul>
+  <li>This release fixes a few high-priority bugs in 0.3 and has a variety
+of smaller fixes.</li>
+  <li>The release also includes several major functionalities regarding
+stream processing.</li>
+  <li>Installation script for nemo prerequisites for easier usage by new users</li>
+  <li>Cleanup of unused stream metrics</li>
+  <li>Addition of critical stream metrics (e.g. latency, throughput)</li>
+  <li>Addition of examples of stream applications</li>
+  <li>Scripts for network profiling within the Nemo cluster</li>
+  <li>Bump library versions to react to security risks and keep libraries
+up-to-date with new features</li>
+  <li>Fix the heisenbug regarding communication through stream pipe channels</li>
+  <li>Upgrading the CI with new platforms</li>
+</ul>
+
+<h2>        Sub-task
+</h2>
+<ul>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-398">NEMO-398</a>] -         ExecutorRepresenter interface and LambdaExecutorRepresenter 
+</li>
+</ul>
+
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-299">NEMO-299</a>] -         WindowedWordCountITCase Hangs (Heisenbug)
+</li>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-460">NEMO-460</a>] -         Setting coders in CombinePerKey transformation
+</li>
+</ul>
+
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-481">NEMO-481</a>] -         Add Stream examples
+</li>
+</ul>
+
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-394">NEMO-394</a>] -         Exchange data via shared memory when two tasks are in the same Executor in streaming
+</li>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-429">NEMO-429</a>] -         Dec 2nd, 2019 Code Session
+</li>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-434">NEMO-434</a>] -         Logical DAG modification for Dynamic sampling of task metrics during the execution of a stage
+</li>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-436">NEMO-436</a>] -         Dynamic re-configuration based on the Sampled Metric Data
+</li>
+</ul>
+
+<h2>        Task
+</h2>
+<ul>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-422">NEMO-422</a>] -         SonarCloud issues
+</li>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-440">NEMO-440</a>] -         Migrate to Java11 and use Java 11 Features
+</li>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-482">NEMO-482</a>] -         Keep library versions updated
+</li>
+</ul>
+
+<h2>        Umbrella
+</h2>
+<ul>
+<li>[<a href="https://issues.apache.org/jira/browse/NEMO-483">NEMO-483</a>] -         Record Metrics associated with stream processing
+</li>
+</ul>
+
 </div>
             <hr>
             <ul class="pager">
-                 
-                <li class="next">
-                    <a href="/blog/2018/03/23/pado-on-nemo/">
-                      Newer <span aria-hidden="true">&rarr;</span>
+                
+                <li class="previous">
+                    <a href="/blog/2022/06/07/release-note-0.3/">
+                        <span aria-hidden="true">&larr;</span> Older
                     </a>
                 </li>
-                
+                 
             </ul>
         </div>
 

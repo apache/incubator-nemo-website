@@ -1,5 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://nemo.apache.org//feed.xml" rel="self" type="application/atom+xml" /><link href="http://nemo.apache.org//" rel="alternate" type="text/html" hreflang="en-US" /><updated>2022-09-09T21:53:08+09:00</updated><id>http://nemo.apache.org//feed.xml</id><title type="html">Nemo</title><subtitle>A Data Processing System for Flexible Employment With Different Deployment Characteristics.
-</subtitle><entry><title type="html">Nemo Release 0.2</title><link href="http://nemo.apache.org//blog/2020/03/09/release-note-0.2/" rel="alternate" type="text/html" title="Nemo Release 0.2" /><published>2020-03-09T00:00:00+09:00</published><updated>2020-03-09T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2020/03/09/release-note-0.2</id><content type="html" xml:base="http://nemo.apache.org//blog/2020/03/09/release-note-0.2/">&lt;p&gt;Release Notes - Apache Nemo - Version 0.2&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://nemo.apache.org//feed.xml" rel="self" type="application/atom+xml" /><link href="http://nemo.apache.org//" rel="alternate" type="text/html" hreflang="en-US" /><updated>2022-09-10T00:27:36+09:00</updated><id>http://nemo.apache.org//feed.xml</id><title type="html">Nemo</title><subtitle>A Data Processing System for Flexible Employment With Different Deployment Characteristics.
+</subtitle><entry><title type="html">Nemo Release 0.4</title><link href="http://nemo.apache.org//blog/2022/09/10/release-note-0.4/" rel="alternate" type="text/html" title="Nemo Release 0.4" /><published>2022-09-10T00:00:00+09:00</published><updated>2022-09-10T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2022/09/10/release-note-0.4</id><content type="html" xml:base="http://nemo.apache.org//blog/2022/09/10/release-note-0.4/">&lt;p&gt;Release Notes - Apache Nemo - Version 0.4&lt;/p&gt;
+
+&lt;h3 id=&quot;heres-a-brief-summary-about-the-release&quot;&gt;Here’s a brief summary about the release:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This release fixes a few high-priority bugs in 0.3 and has a variety
+of smaller fixes.&lt;/li&gt;
+  &lt;li&gt;The release also includes several major functionalities regarding
+stream processing.&lt;/li&gt;
+  &lt;li&gt;Installation script for nemo prerequisites for easier usage by new users&lt;/li&gt;
+  &lt;li&gt;Cleanup of unused stream metrics&lt;/li&gt;
+  &lt;li&gt;Addition of critical stream metrics (e.g. latency, throughput)&lt;/li&gt;
+  &lt;li&gt;Addition of examples of stream applications&lt;/li&gt;
+  &lt;li&gt;Scripts for network profiling within the Nemo cluster&lt;/li&gt;
+  &lt;li&gt;Bump library versions to react to security risks and keep libraries
+up-to-date with new features&lt;/li&gt;
+  &lt;li&gt;Fix the heisenbug regarding communication through stream pipe channels&lt;/li&gt;
+  &lt;li&gt;Upgrading the CI with new platforms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        Sub-task
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-398&quot;&gt;NEMO-398&lt;/a&gt;] -         ExecutorRepresenter interface and LambdaExecutorRepresenter 
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        Bug
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-299&quot;&gt;NEMO-299&lt;/a&gt;] -         WindowedWordCountITCase Hangs (Heisenbug)
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-460&quot;&gt;NEMO-460&lt;/a&gt;] -         Setting coders in CombinePerKey transformation
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        New Feature
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-481&quot;&gt;NEMO-481&lt;/a&gt;] -         Add Stream examples
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        Improvement
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-394&quot;&gt;NEMO-394&lt;/a&gt;] -         Exchange data via shared memory when two tasks are in the same Executor in streaming
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-429&quot;&gt;NEMO-429&lt;/a&gt;] -         Dec 2nd, 2019 Code Session
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-434&quot;&gt;NEMO-434&lt;/a&gt;] -         Logical DAG modification for Dynamic sampling of task metrics during the execution of a stage
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-436&quot;&gt;NEMO-436&lt;/a&gt;] -         Dynamic re-configuration based on the Sampled Metric Data
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        Task
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-422&quot;&gt;NEMO-422&lt;/a&gt;] -         SonarCloud issues
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-440&quot;&gt;NEMO-440&lt;/a&gt;] -         Migrate to Java11 and use Java 11 Features
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-482&quot;&gt;NEMO-482&lt;/a&gt;] -         Keep library versions updated
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        Umbrella
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-483&quot;&gt;NEMO-483&lt;/a&gt;] -         Record Metrics associated with stream processing
+&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Won Wook SONG</name></author><summary type="html">Release Notes - Apache Nemo - Version 0.4</summary></entry><entry><title type="html">Nemo Release 0.3</title><link href="http://nemo.apache.org//blog/2022/06/07/release-note-0.3/" rel="alternate" type="text/html" title="Nemo Release 0.3" /><published>2022-06-07T00:00:00+09:00</published><updated>2022-06-07T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2022/06/07/release-note-0.3</id><content type="html" xml:base="http://nemo.apache.org//blog/2022/06/07/release-note-0.3/">&lt;p&gt;Release Notes - Apache Nemo - Version 0.3&lt;/p&gt;
+
+&lt;h3 id=&quot;heres-a-brief-summary-about-the-release&quot;&gt;Here’s a brief summary about the release:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This release fixes a few high-priority bugs in 0.2 and has a variety of smaller fixes.&lt;/li&gt;
+  &lt;li&gt;The release also includes several major functionalities regarding stream processing and dynamic optimizations, such as dynamic task sizing, as well as implementation of the simulation scheduler.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        Sub-task
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-351&quot;&gt;NEMO-351&lt;/a&gt;] -         Empowering Nemo with fast I/O using Apache Crail
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        Bug
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-377&quot;&gt;NEMO-377&lt;/a&gt;] -         Fix watermark emission when there are no outputs in GBKWindowTransform
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-411&quot;&gt;NEMO-411&lt;/a&gt;] -         Bug in ScheduleGroupPass, OutputTag, DuplicateEdgeGroup
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-447&quot;&gt;NEMO-447&lt;/a&gt;] -         Fix beam pom.xml to resolve build failure
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-457&quot;&gt;NEMO-457&lt;/a&gt;] -         Improve test coverage score on sonar cloud test
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        New Feature
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-438&quot;&gt;NEMO-438&lt;/a&gt;] -         Create a Simulator for Simulating an Execution of an Execution Plan
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;        Improvement
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-324&quot;&gt;NEMO-324&lt;/a&gt;] -         Distinguish Beam&amp;#39;s run and waitUntilFinish methods.
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-392&quot;&gt;NEMO-392&lt;/a&gt;] -         Support combine in streaming
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-433&quot;&gt;NEMO-433&lt;/a&gt;] -         Improvement of Task Metrics and Collecting Them For Sampling
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-439&quot;&gt;NEMO-439&lt;/a&gt;] -         Upgrade current working version to 0.3-SNAPSHOT
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&quot;https://issues.apache.org/jira/browse/NEMO-459&quot;&gt;NEMO-459&lt;/a&gt;] -         Enable Automatic Analysis for sonar cloud
+&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Won Wook SONG</name></author><summary type="html">Release Notes - Apache Nemo - Version 0.3</summary></entry><entry><title type="html">Nemo Release 0.2</title><link href="http://nemo.apache.org//blog/2020/03/09/release-note-0.2/" rel="alternate" type="text/html" title="Nemo Release 0.2" /><published>2020-03-09T00:00:00+09:00</published><updated>2020-03-09T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2020/03/09/release-note-0.2</id><content type="html" xml:base="http://nemo.apache.org//blog/2020/03/09/release-note-0.2/">&lt;p&gt;Release Notes - Apache Nemo - Version 0.2&lt;/p&gt;
 
 &lt;h2&gt;        Sub-task
 &lt;/h2&gt;
