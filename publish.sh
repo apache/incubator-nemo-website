@@ -22,7 +22,6 @@ bundler exec jekyll clean -d content
 bundler exec jekyll build -d content
 
 COMMIT_HASH=`git rev-parse HEAD`
-git checkout asf-site
 
 git pull
 git add content
