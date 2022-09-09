@@ -14,18 +14,19 @@ sending an e-mail to dev@ after subscription.
 
 | Apache ID | Full Name | Affiliation(s) |
 | --- | :------: | -------------: |
-| bgchun | Byung-Gon Chun | Seoul National University |
-| gwkim | Geon-Woo Kim | Viva Republica, Seoul National University |
-| gwlee | Gyewon Lee | Seoul National University |
-| haeyoon | Haeyoon Cho | Seoul National University |
-| jangho | JangHo Seo | Seoul National University |
+| bgchun | Byung-Gon Chun | FriendliAI, Seoul National University |
+| gwkim | Geon-Woo Kim | UT Austin |
+| gwlee | Gyewon Lee | FriendliAI |
+| haeyoon | Haeyoon Cho | Qualcomm AI Research |
+| hwarim | Hwarim Hyun | Naver |
+| jangho | JangHo Seo | Naver |
 | jeongyoon | Jeongyoon Eo | Seoul National University |
 | jglee | Jung-Gil Lee | Google |
-| johnyangk | Youngseok Yang | Seoul National University |
-| jooykim | Joo Yeon Kim | Samsung Electronics |
+| johnyangk | Youngseok Yang | Mirny Inc. |
+| jooykim | Joo Yeon Kim | Samsung Research |
 | sanha | Sanha Lee | Naver |
-| taegeonum | Taegeon Um | Seoul National University |
+| taegeonum | Taegeon Um | Samsung Research |
 | wonook | Won Wook SONG | Seoul National University |
-| wylee | Wooyeon Lee | Samsung Electronics |
+| wylee | Wooyeon Lee | Samsung Research |
 | yunseong | Yunseong Lee | Qualcomm AI Research |
 
