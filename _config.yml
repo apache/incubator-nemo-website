@@ -3,20 +3,22 @@ title: Nemo
 email: nemo@spl.snu.ac.kr
 description: >
   A Data Processing System for Flexible Employment With Different Deployment Characteristics.
+lang: en-US
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: http://nemo.apache.org/ # the base hostname & protocol for your site
 git_address: https://github.com/apache/incubator-nemo
 git_edit_address: https://github.com/apache/incubator-nemo-website
 
-# theme options from https://bootswatch.com/
+# theme options from https://bootswatch.com/3/
 # comment out this to use default Bootstrap
-bootwatch: readable
+bootwatch: readable # paper # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-gems:
+# Plugins (previously gems:)
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
@@ -28,6 +30,7 @@ exclude:
   - .idea/
   - .gitignore
   - README.md
+  - vendor
 timezone: Asia/Seoul
 defaults:
 - scope:

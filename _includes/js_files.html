@@ -1,8 +1,8 @@
 <script>
   var baseurl = '{{ site.baseurl }}'
 </script>
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }} "></script>
-<script src="{{ "/js/typeahead.bundle.min.js" | prepend: site.baseurl }} "></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="{{ "/assets/js/bootstrap.min.js" | relative_url }} "></script>
+<script src="{{ "/assets/js/typeahead.bundle.min.js" | relative_url }} "></script>
 
-<script src="{{ "/js/main.js" | prepend: site.baseurl }} "></script>
+<script src="{{ "/assets/js/main.js" | relative_url }} "></script>
