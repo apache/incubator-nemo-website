@@ -24,7 +24,7 @@ bundler exec jekyll build -d content
 COMMIT_HASH=`git rev-parse HEAD`
 git checkout asf-site
 
-git pull --rebase
+git pull
 git add content
 echo "Publishing changes from master branch $COMMIT_HASH"
 git commit -a -m "Publishing from $COMMIT_HASH"

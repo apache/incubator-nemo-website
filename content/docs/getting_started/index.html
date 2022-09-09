@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 
     <link rel="shortcut icon" href="/favicon.ico?1">
-    <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Getting Started | Nemo</title>
-<meta name="generator" content="Jekyll v3.4.3" />
+<meta name="generator" content="Jekyll v3.9.2" />
 <meta property="og:title" content="Getting Started" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Nemo" />
@@ -21,9 +21,11 @@
 <meta property="og:url" content="http://nemo.apache.org//docs/getting_started/" />
 <meta property="og:site_name" content="Nemo" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-09T19:40:37+09:00" />
+<meta property="article:published_time" content="2022-09-09T21:12:06+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Getting Started" />
 <script type="application/ld+json">
-{"headline":"Getting Started","url":"http://nemo.apache.org//docs/getting_started/","dateModified":"2022-09-09T19:40:37+09:00","datePublished":"2022-09-09T19:40:37+09:00","description":"Nemo","@type":"WebPage","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"WebPage","dateModified":"2022-09-09T21:12:06+09:00","datePublished":"2022-09-09T21:12:06+09:00","description":"Nemo","headline":"Getting Started","url":"http://nemo.apache.org//docs/getting_started/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -44,7 +46,7 @@
         <span class="icon-bar"></span>
       </button>
             <a class="navbar-brand" href="/">
-                <span><img src="/img/nemo-logo.png"></span>
+                <span><img src="/assets/img/nemo-logo.png" alt="Logo"></span>
             </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -60,7 +62,7 @@
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">
                     <div class="form-group has-feedback">
-                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
                         <i class="fa fa-search form-control-feedback"></i>
                     </div>
                 </form>
@@ -75,118 +77,132 @@
 
     <div class="page-content">
         <div class="wrapper">
+
+        <div class="container">
+        <div class="row">
+        <div class="col-md-12">
             <div class="container">
     <div class="row">
         <div class="col-md-4">
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
-          Getting Started
-        </a>
-      </h4>
-    </div>
-    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-label="Side Navigation">
-      <div class="list-group">
-        
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Getting Started
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
           
+            
+            
+            <a class="list-group-item " href="/docs/home/">Overview</a>
           
-          <a class="list-group-item " href="/docs/home/">Overview</a>
-        
+            
+            
+            <a class="list-group-item active" href="/docs/getting_started/">Getting Started</a>
           
-          
-          <a class="list-group-item active" href="/docs/getting_started/">Getting Started</a>
-        
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-          Optimizations
-        </a>
-      </h4>
-    </div>
-    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-label="Side Navigation">
-      <div class="list-group">
-        
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+            Optimizations
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-2" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
           
+            
+            
+            <a class="list-group-item " href="/docs/ir/">Nemo Intermediate Representation (IR)</a>
           
-          <a class="list-group-item " href="/docs/ir/">Nemo Intermediate Representation (IR)</a>
-        
+            
+            
+            <a class="list-group-item " href="/docs/passes_and_policies/">Passes and Policies</a>
           
-          
-          <a class="list-group-item " href="/docs/passes_and_policies/">Passes and Policies</a>
-        
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-          System Designs
-        </a>
-      </h4>
-    </div>
-    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-label="Side Navigation">
-      <div class="list-group">
-        
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+            System Designs
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-3" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
           
+            
+            
+            <a class="list-group-item " href="/docs/compiler_design/">Compiler Design</a>
           
-          <a class="list-group-item " href="/docs/compiler_design/">Compiler Design</a>
-        
+            
+            
+            <a class="list-group-item " href="/docs/runtime_design/">Runtime Design</a>
           
-          
-          <a class="list-group-item " href="/docs/runtime_design/">Runtime Design</a>
-        
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
-          Contribute
-        </a>
-      </h4>
-    </div>
-    <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-label="Side Navigation">
-      <div class="list-group">
-        
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+            Contribute
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-4" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
           
+            
+            
+            <a class="list-group-item " href="/docs/contribute/">Contribute</a>
           
-          <a class="list-group-item " href="/docs/contribute/">Contribute</a>
-        
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
-          Security
-        </a>
-      </h4>
-    </div>
-    <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-label="Side Navigation">
-      <div class="list-group">
-        
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+            Security
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-5" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
           
+            
+            
+            <a class="list-group-item " href="/docs/security/">Security Guide</a>
           
-          <a class="list-group-item " href="/docs/security/">Security Guide</a>
-        
+        </div>
       </div>
     </div>
-  </div>
-
+  
 </div>
 
         </div>
@@ -221,11 +237,10 @@
     <ul>
       <li>Download Hadoop 2.7.2 at https://archive.apache.org/dist/hadoop/common/hadoop-2.7.2/</li>
       <li>Set the shell profile as following:
-        <div class="language-bash highlighter-rouge"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">HADOOP_HOME</span><span class="o">=</span>/path/to/hadoop-2.7.2
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">HADOOP_HOME</span><span class="o">=</span>/path/to/hadoop-2.7.2
   <span class="nb">export </span><span class="nv">YARN_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
   <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/bin
-</code></pre>
-        </div>
+</code></pre></div>        </div>
       </li>
     </ul>
   </li>
@@ -234,31 +249,28 @@
       <li>
         <p>On Ubuntu 14.04 LTS and its point releases:</p>
 
-        <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get install protobuf-compiler
-</code></pre>
-        </div>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>protobuf-compiler
+</code></pre></div>        </div>
       </li>
       <li>
         <p>On Ubuntu 16.04 LTS and its point releases:</p>
 
-        <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo add-apt-repository ppa:snuspl/protobuf-250
-<span class="gp">$ </span>sudo apt update
-<span class="gp">$ </span>sudo apt install protobuf-compiler<span class="o">=</span>2.5.0-9xenial1
-</code></pre>
-        </div>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>add-apt-repository ppa:snuspl/protobuf-250
+<span class="nv">$ </span><span class="nb">sudo </span>apt update
+<span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>protobuf-compiler<span class="o">=</span>2.5.0-9xenial1
+</code></pre></div>        </div>
       </li>
       <li>
         <p>On macOS:</p>
 
-        <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.tar.bz2
-<span class="gp">$ </span>tar xvf protobuf-2.5.0.tar.bz2
-<span class="gp">$ </span><span class="nb">pushd </span>protobuf-2.5.0
-<span class="gp">$ </span>./configure <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">CXX</span><span class="o">=</span>clang++ <span class="nv">CXXFLAGS</span><span class="o">=</span><span class="s1">'-std=c++11 -stdlib=libc++ -O3 -g'</span> <span class="nv">LDFLAGS</span><span class="o">=</span><span class="s1">'-stdlib=libc++'</span> <span class="nv">LIBS</span><span class="o">=</span><span class="s2">"-lc++ -lc++abi"</span>
-<span class="gp">$ </span>make -j 4
-<span class="gp">$ </span>sudo make install
-<span class="gp">$ </span><span class="nb">popd</span>
-</code></pre>
-        </div>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.tar.bz2
+<span class="nv">$ </span><span class="nb">tar </span>xvf protobuf-2.5.0.tar.bz2
+<span class="nv">$ </span><span class="nb">pushd </span>protobuf-2.5.0
+<span class="nv">$ </span>./configure <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">CXX</span><span class="o">=</span>clang++ <span class="nv">CXXFLAGS</span><span class="o">=</span><span class="s1">'-std=c++11 -stdlib=libc++ -O3 -g'</span> <span class="nv">LDFLAGS</span><span class="o">=</span><span class="s1">'-stdlib=libc++'</span> <span class="nv">LIBS</span><span class="o">=</span><span class="s2">"-lc++ -lc++abi"</span>
+<span class="nv">$ </span>make <span class="nt">-j</span> 4
+<span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
+<span class="nv">$ </span><span class="nb">popd</span>
+</code></pre></div>        </div>
       </li>
       <li>
         <p>Or build from source:</p>
@@ -266,14 +278,14 @@
         <ul>
           <li>Downloadable at https://github.com/google/protobuf/releases/tag/v2.5.0</li>
           <li>Extract the downloaded tarball</li>
-          <li><code class="highlighter-rouge">$ ./configure</code></li>
-          <li><code class="highlighter-rouge">$ make</code></li>
-          <li><code class="highlighter-rouge">$ make check</code></li>
-          <li><code class="highlighter-rouge">$ sudo make install</code></li>
+          <li><code class="language-plaintext highlighter-rouge">$ ./configure</code></li>
+          <li><code class="language-plaintext highlighter-rouge">$ make</code></li>
+          <li><code class="language-plaintext highlighter-rouge">$ make check</code></li>
+          <li><code class="language-plaintext highlighter-rouge">$ sudo make install</code></li>
         </ul>
       </li>
       <li>
-        <p>To check for a successful installation of version 2.5.0, run <code class="highlighter-rouge">$ protoc --version</code></p>
+        <p>To check for a successful installation of version 2.5.0, run <code class="language-plaintext highlighter-rouge">$ protoc --version</code></p>
       </li>
     </ul>
   </li>
@@ -281,8 +293,8 @@
 
 <h3 id="installing-nemo">Installing Nemo</h3>
 <ul>
-  <li>Run all tests and install: <code class="highlighter-rouge">$ mvn clean install -T 2C</code></li>
-  <li>Run only unit tests and install: <code class="highlighter-rouge">$ mvn clean install -DskipITs -T 2C</code></li>
+  <li>Run all tests and install: <code class="language-plaintext highlighter-rouge">$ mvn clean install -T 2C</code></li>
+  <li>Run only unit tests and install: <code class="language-plaintext highlighter-rouge">$ mvn clean install -DskipITs -T 2C</code></li>
 </ul>
 
 <h2 id="running-beam-applications">Running Beam applications</h2>
@@ -293,84 +305,82 @@ Below describes how Beam applications can be run directly on Nemo.</p>
 
 <h3 id="configurable-options">Configurable options</h3>
 <ul>
-  <li><code class="highlighter-rouge">-job_id</code>: ID of the Beam job</li>
-  <li><code class="highlighter-rouge">-user_main</code>: Canonical name of the Beam application</li>
-  <li><code class="highlighter-rouge">-user_args</code>: Arguments that the Beam application accepts</li>
-  <li><code class="highlighter-rouge">-optimization_policy</code>: Canonical name of the optimization policy to apply to a job DAG in Nemo Compiler</li>
-  <li><code class="highlighter-rouge">-deploy_mode</code>: <code class="highlighter-rouge">yarn</code> is supported(default value is <code class="highlighter-rouge">local</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">-job_id</code>: ID of the Beam job</li>
+  <li><code class="language-plaintext highlighter-rouge">-user_main</code>: Canonical name of the Beam application</li>
+  <li><code class="language-plaintext highlighter-rouge">-user_args</code>: Arguments that the Beam application accepts</li>
+  <li><code class="language-plaintext highlighter-rouge">-optimization_policy</code>: Canonical name of the optimization policy to apply to a job DAG in Nemo Compiler</li>
+  <li><code class="language-plaintext highlighter-rouge">-deploy_mode</code>: <code class="language-plaintext highlighter-rouge">yarn</code> is supported(default value is <code class="language-plaintext highlighter-rouge">local</code>)</li>
 </ul>
 
 <h3 id="examples">Examples</h3>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c">## WordCount example from the Beam website (Count words from a document)</span>
-<span class="gp">$ </span>./bin/run_beam.sh <span class="se">\</span>
-    -job_id beam_wordcount <span class="se">\</span>
-    -optimization_policy org.apache.nemo.compiler.optimizer.policy.DefaultPolicy <span class="se">\</span>
-    -user_main org.apache.nemo.examples.beam.BeamWordCount <span class="se">\</span>
-    -user_args <span class="s2">"--runner=NemoRunner --inputFile=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/examples/resources/inputs/test_input_wordcount --output=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/outputs/wordcount"</span>
-<span class="gp">$ </span>less <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/outputs/wordcount<span class="k">*</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## WordCount example from the Beam website (Count words from a document)</span>
+<span class="nv">$ </span>./bin/run_beam.sh <span class="se">\</span>
+    <span class="nt">-job_id</span> beam_wordcount <span class="se">\</span>
+    <span class="nt">-optimization_policy</span> org.apache.nemo.compiler.optimizer.policy.DefaultPolicy <span class="se">\</span>
+    <span class="nt">-user_main</span> org.apache.nemo.examples.beam.BeamWordCount <span class="se">\</span>
+    <span class="nt">-user_args</span> <span class="s2">"--runner=NemoRunner --inputFile=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/examples/resources/inputs/test_input_wordcount --output=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/outputs/wordcount"</span>
+<span class="nv">$ </span>less <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/outputs/wordcount<span class="k">*</span>
 
 <span class="c">## MapReduce WordCount example (Count words from the Wikipedia dataset)</span>
-<span class="gp">$ </span>./bin/run_beam.sh <span class="se">\</span>
-    -job_id mr_default <span class="se">\</span>
-    -executor_json <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/examples/resources/executors/beam_test_executor_resources.json <span class="se">\</span>
-    -optimization_policy org.apache.nemo.compiler.optimizer.policy.DefaultPolicy <span class="se">\</span>
-    -user_main org.apache.nemo.examples.beam.WordCount <span class="se">\</span>
-    -user_args <span class="s2">"</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/examples/resources/inputs/test_input_wordcount </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/outputs/wordcount"</span>
-<span class="gp">$ </span>less <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/outputs/wordcount<span class="k">*</span>
+<span class="nv">$ </span>./bin/run_beam.sh <span class="se">\</span>
+    <span class="nt">-job_id</span> mr_default <span class="se">\</span>
+    <span class="nt">-executor_json</span> <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/examples/resources/executors/beam_test_executor_resources.json <span class="se">\</span>
+    <span class="nt">-optimization_policy</span> org.apache.nemo.compiler.optimizer.policy.DefaultPolicy <span class="se">\</span>
+    <span class="nt">-user_main</span> org.apache.nemo.examples.beam.WordCount <span class="se">\</span>
+    <span class="nt">-user_args</span> <span class="s2">"</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/examples/resources/inputs/test_input_wordcount </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/outputs/wordcount"</span>
+<span class="nv">$ </span>less <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/outputs/wordcount<span class="k">*</span>
 
 <span class="c">## YARN cluster example</span>
-<span class="gp">$ </span>./bin/run_beam.sh <span class="se">\</span>
-    -deploy_mode yarn <span class="se">\</span>
-    -job_id mr_transient <span class="se">\</span>
-    -executor_json <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/examples/resources/executors/beam_test_executor_resources.json <span class="se">\</span>
-    -user_main org.apache.nemo.examples.beam.WordCount <span class="se">\</span>
-    -optimization_policy org.apache.nemo.compiler.optimizer.policy.TransientResourcePolicy <span class="se">\</span>
-    -user_args <span class="s2">"hdfs://v-m:9000/test_input_wordcount hdfs://v-m:9000/test_output_wordcount"</span>
+<span class="nv">$ </span>./bin/run_beam.sh <span class="se">\</span>
+    <span class="nt">-deploy_mode</span> yarn <span class="se">\</span>
+    <span class="nt">-job_id</span> mr_transient <span class="se">\</span>
+    <span class="nt">-executor_json</span> <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/examples/resources/executors/beam_test_executor_resources.json <span class="se">\</span>
+    <span class="nt">-user_main</span> org.apache.nemo.examples.beam.WordCount <span class="se">\</span>
+    <span class="nt">-optimization_policy</span> org.apache.nemo.compiler.optimizer.policy.TransientResourcePolicy <span class="se">\</span>
+    <span class="nt">-user_args</span> <span class="s2">"hdfs://v-m:9000/test_input_wordcount hdfs://v-m:9000/test_output_wordcount"</span>
 
 <span class="c">## NEXMark streaming Q0 (query0) example</span>
-<span class="gp">$ </span>./bin/run_nexmark.sh <span class="se">\</span>
-    -job_id nexmark-Q0 <span class="se">\</span>
-    -executor_json <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/examples/resources/executors/beam_test_executor_resources.json <span class="se">\</span>
-    -user_main org.apache.beam.sdk.nexmark.Main <span class="se">\</span>
-    -optimization_policy org.apache.nemo.compiler.optimizer.policy.StreamingPolicy <span class="se">\</span>
-    -scheduler_impl_class_name org.apache.nemo.runtime.master.scheduler.StreamingScheduler <span class="se">\</span>
-    -user_args <span class="s2">"--runner=NemoRunner --streaming=true --query=0 --numEventGenerators=1"</span>
+<span class="nv">$ </span>./bin/run_nexmark.sh <span class="se">\</span>
+    <span class="nt">-job_id</span> nexmark-Q0 <span class="se">\</span>
+    <span class="nt">-executor_json</span> <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/examples/resources/executors/beam_test_executor_resources.json <span class="se">\</span>
+    <span class="nt">-user_main</span> org.apache.beam.sdk.nexmark.Main <span class="se">\</span>
+    <span class="nt">-optimization_policy</span> org.apache.nemo.compiler.optimizer.policy.StreamingPolicy <span class="se">\</span>
+    <span class="nt">-scheduler_impl_class_name</span> org.apache.nemo.runtime.master.scheduler.StreamingScheduler <span class="se">\</span>
+    <span class="nt">-user_args</span> <span class="s2">"--runner=NemoRunner --streaming=true --query=0 --numEventGenerators=1"</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="resource-configuration">Resource Configuration</h2>
-<p><code class="highlighter-rouge">-executor_json</code> command line option can be used to provide a path to the JSON file that describes resource configuration for executors. Its default value is <code class="highlighter-rouge">config/default.json</code>, which initializes one of each <code class="highlighter-rouge">Transient</code>, <code class="highlighter-rouge">Reserved</code>, and <code class="highlighter-rouge">Compute</code> executor, each of which has one core and 1024MB memory.</p>
+<p><code class="language-plaintext highlighter-rouge">-executor_json</code> command line option can be used to provide a path to the JSON file that describes resource configuration for executors. Its default value is <code class="language-plaintext highlighter-rouge">config/default.json</code>, which initializes one of each <code class="language-plaintext highlighter-rouge">Transient</code>, <code class="language-plaintext highlighter-rouge">Reserved</code>, and <code class="language-plaintext highlighter-rouge">Compute</code> executor, each of which has one core and 1024MB memory.</p>
 
 <h3 id="configurable-options-1">Configurable options</h3>
 <ul>
-  <li><code class="highlighter-rouge">num</code> (optional): Number of containers. Default value is 1</li>
-  <li><code class="highlighter-rouge">type</code>:  Three container types are supported:
+  <li><code class="language-plaintext highlighter-rouge">num</code> (optional): Number of containers. Default value is 1</li>
+  <li><code class="language-plaintext highlighter-rouge">type</code>:  Three container types are supported:
     <ul>
-      <li><code class="highlighter-rouge">Transient</code> : Containers that store eviction-prone resources. When batch jobs use idle resources in <code class="highlighter-rouge">Transient</code> containers, they can be arbitrarily evicted when latency-critical jobs attempt to use the resources.</li>
-      <li><code class="highlighter-rouge">Reserved</code> : Containers that store eviction-free resources. <code class="highlighter-rouge">Reserved</code> containers are used to reliably store intermediate data which have high eviction cost.</li>
-      <li><code class="highlighter-rouge">Compute</code> : Containers that are mainly used for computation.</li>
+      <li><code class="language-plaintext highlighter-rouge">Transient</code> : Containers that store eviction-prone resources. When batch jobs use idle resources in <code class="language-plaintext highlighter-rouge">Transient</code> containers, they can be arbitrarily evicted when latency-critical jobs attempt to use the resources.</li>
+      <li><code class="language-plaintext highlighter-rouge">Reserved</code> : Containers that store eviction-free resources. <code class="language-plaintext highlighter-rouge">Reserved</code> containers are used to reliably store intermediate data which have high eviction cost.</li>
+      <li><code class="language-plaintext highlighter-rouge">Compute</code> : Containers that are mainly used for computation.</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">memory_mb</code>: Memory size in MB</li>
-  <li><code class="highlighter-rouge">capacity</code>: Number of <code class="highlighter-rouge">Task</code>s that can be run in an executor. Set this value to be the same as the number of CPU cores of the container.</li>
+  <li><code class="language-plaintext highlighter-rouge">memory_mb</code>: Memory size in MB</li>
+  <li><code class="language-plaintext highlighter-rouge">capacity</code>: Number of <code class="language-plaintext highlighter-rouge">Task</code>s that can be run in an executor. Set this value to be the same as the number of CPU cores of the container.</li>
 </ul>
 
 <h3 id="examples-1">Examples</h3>
-<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transient"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"memory_mb"</span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transient"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"memory_mb"</span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reserved"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"memory_mb"</span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reserved"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"memory_mb"</span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <p>This example configuration specifies</p>
 <ul>
@@ -379,50 +389,47 @@ Below describes how Beam applications can be run directly on Nemo.</p>
 </ul>
 
 <h2 id="monitoring-your-job-using-web-ui">Monitoring your job using Web UI</h2>
-<p>Please refer to the instructions at <code class="highlighter-rouge">web-ui/README.md</code> to run the frontend.</p>
+<p>Please refer to the instructions at <code class="language-plaintext highlighter-rouge">web-ui/README.md</code> to run the frontend.</p>
 
 <h3 id="visualizing-metric-on-run-time">Visualizing metric on run-time</h3>
 
 <p>While Nemo driver is alive, it can post runtime metrics through websocket. At your frontend, add websocket endpoint</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ws://&lt;DRIVER&gt;:10101/api/websocket
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ws://&lt;DRIVER&gt;:10101/api/websocket
+</code></pre></div></div>
 
-<p>where <code class="highlighter-rouge">&lt;DRIVER&gt;</code> is the hostname that Nemo driver runs.</p>
+<p>where <code class="language-plaintext highlighter-rouge">&lt;DRIVER&gt;</code> is the hostname that Nemo driver runs.</p>
 
-<p>OR, you can directly run the WebUI on the driver using <code class="highlighter-rouge">bin/run_webserver.sh</code>,
+<p>OR, you can directly run the WebUI on the driver using <code class="language-plaintext highlighter-rouge">bin/run_webserver.sh</code>,
 where it looks for the websocket on its local machine,
 which, by default, provides the address at</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>http://&lt;DRIVER&gt;:3333
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://&lt;DRIVER&gt;:3333
+</code></pre></div></div>
 
 <h3 id="post-job-analysis">Post-job analysis</h3>
 
-<p>On job completion, the Nemo driver creates <code class="highlighter-rouge">metric.json</code> at the directory specified by <code class="highlighter-rouge">-dag_dir</code> option. At your frontend, add the JSON file to do post-job analysis.</p>
+<p>On job completion, the Nemo driver creates <code class="language-plaintext highlighter-rouge">metric.json</code> at the directory specified by <code class="language-plaintext highlighter-rouge">-dag_dir</code> option. At your frontend, add the JSON file to do post-job analysis.</p>
 
 <p>Other JSON files are for legacy Web UI, hosted <a href="https:/nemo.snuspl.snu.ac.kr:50443/nemo-dag/">here</a>. It uses <a href="https://www.graphviz.org/">Graphviz</a> to visualize IR DAGs and execution plans.</p>
 
 <h3 id="examples-2">Examples</h3>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>./bin/run_beam.sh <span class="se">\</span>
-    -job_id als <span class="se">\</span>
-    -executor_json <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/examples/resources/executors/beam_test_executor_resources.json <span class="se">\</span>
-    -user_main org.apache.nemo.examples.beam.AlternatingLeastSquare <span class="se">\</span>
-    -optimization_policy org.apache.nemo.compiler.optimizer.policy.TransientResourcePolicy <span class="se">\</span>
-    -dag_dir <span class="s2">"./dag/als"</span> <span class="se">\</span>
-    -user_args <span class="s2">"</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/examples/resources/inputs/test_input_als 10 3"</span>
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./bin/run_beam.sh <span class="se">\</span>
+    <span class="nt">-job_id</span> als <span class="se">\</span>
+    <span class="nt">-executor_json</span> <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/examples/resources/executors/beam_test_executor_resources.json <span class="se">\</span>
+    <span class="nt">-user_main</span> org.apache.nemo.examples.beam.AlternatingLeastSquare <span class="se">\</span>
+    <span class="nt">-optimization_policy</span> org.apache.nemo.compiler.optimizer.policy.TransientResourcePolicy <span class="se">\</span>
+    <span class="nt">-dag_dir</span> <span class="s2">"./dag/als"</span> <span class="se">\</span>
+    <span class="nt">-user_args</span> <span class="s2">"</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="s2">/examples/resources/inputs/test_input_als 10 3"</span>
+</code></pre></div></div>
 
 <h2 id="options-for-writing-metric-results-to-databases">Options for writing metric results to databases.</h2>
 
 <ul>
-  <li><code class="highlighter-rouge">-db_enabled</code>: Whether or not to turn on the DB (<code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>).</li>
-  <li><code class="highlighter-rouge">-db_address</code>: Address of the DB. (ex. PostgreSQL DB starts with <code class="highlighter-rouge">jdbc:postgresql://...</code>)</li>
-  <li><code class="highlighter-rouge">-db_id</code> : ID of the DB from the given address.</li>
-  <li><code class="highlighter-rouge">-db_password</code>: Credentials for the DB from the given address.</li>
+  <li><code class="language-plaintext highlighter-rouge">-db_enabled</code>: Whether or not to turn on the DB (<code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">-db_address</code>: Address of the DB. (ex. PostgreSQL DB starts with <code class="language-plaintext highlighter-rouge">jdbc:postgresql://...</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">-db_id</code> : ID of the DB from the given address.</li>
+  <li><code class="language-plaintext highlighter-rouge">-db_password</code>: Credentials for the DB from the given address.</li>
 </ul>
 
 <h2 id="speeding-up-builds">Speeding up builds</h2>
@@ -433,12 +440,14 @@ which, by default, provides the address at</p>
 </ul>
 
 </div>
-            <p class="text-center">
-              <br />
-              <a target="_blank" href="https://github.com/apache/incubator-nemo-website/tree/asf-site/_docs/getting_started.md" class="btn btn-default btn-sm githubEditButton" role="button">
-                <i class="fa fa-pencil"></i> Improve this page
-              </a>
-            </p>
+            <div style="clear:both;">
+              <p class="text-center">
+                <br />
+                <a target="_blank" href="https://github.com/apache/incubator-nemo-website/_docs/getting_started.md" class="btn btn-default" role="button">
+                  <i class="fa fa-pencil fa-lg"></i> Improve this page
+                </a>
+              </p>
+            </div>
             <hr>
             
 
@@ -481,6 +490,9 @@ which, by default, provides the address at</p>
 </div>
 
         </div>
+        </div>
+        </div>
+        </div>
     </div>
 
     <footer class="footer">
@@ -497,11 +509,11 @@ which, by default, provides the address at</p>
     <script>
   var baseurl = ''
 </script>
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="/js/bootstrap.min.js "></script>
-<script src="/js/typeahead.bundle.min.js "></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/assets/js/bootstrap.min.js "></script>
+<script src="/assets/js/typeahead.bundle.min.js "></script>
 
-<script src="/js/main.js "></script>
+<script src="/assets/js/main.js "></script>
 
 </body>
 

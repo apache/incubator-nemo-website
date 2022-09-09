@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://nemo.apache.org//feed.xml" rel="self" type="application/atom+xml" /><link href="http://nemo.apache.org//" rel="alternate" type="text/html" /><updated>2022-09-09T19:40:37+09:00</updated><id>http://nemo.apache.org//feed.xml</id><title type="html">Nemo</title><subtitle>A Data Processing System for Flexible Employment With Different Deployment Characteristics.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://nemo.apache.org//feed.xml" rel="self" type="application/atom+xml" /><link href="http://nemo.apache.org//" rel="alternate" type="text/html" hreflang="en-US" /><updated>2022-09-09T21:12:06+09:00</updated><id>http://nemo.apache.org//feed.xml</id><title type="html">Nemo</title><subtitle>A Data Processing System for Flexible Employment With Different Deployment Characteristics.
 </subtitle><entry><title type="html">Nemo Release 0.2</title><link href="http://nemo.apache.org//blog/2020/03/09/release-note-0.2/" rel="alternate" type="text/html" title="Nemo Release 0.2" /><published>2020-03-09T00:00:00+09:00</published><updated>2020-03-09T00:00:00+09:00</updated><id>http://nemo.apache.org//blog/2020/03/09/release-note-0.2</id><content type="html" xml:base="http://nemo.apache.org//blog/2020/03/09/release-note-0.2/">&lt;p&gt;Release Notes - Apache Nemo - Version 0.2&lt;/p&gt;
 
 &lt;h2&gt;        Sub-task
@@ -252,15 +252,14 @@
 &lt;h2 id=&quot;maven-artifacts&quot;&gt;Maven Artifacts&lt;/h2&gt;
 &lt;p&gt;Nemo is available in Maven Central, making it easier to link into your programs without having to build as a JAR. Use the following Maven identifiers to add it to a project:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- https://mvnrepository.com/artifact/org.apache.nemo/nemo-project --&amp;gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- https://mvnrepository.com/artifact/org.apache.nemo/nemo-project --&amp;gt;
 &amp;lt;dependency&amp;gt;
    &amp;lt;groupId&amp;gt;org.apache.nemo&amp;lt;/groupId&amp;gt;
    &amp;lt;artifactId&amp;gt;nemo-project&amp;lt;/artifactId&amp;gt;
    &amp;lt;version&amp;gt;0.1&amp;lt;/version&amp;gt;
    &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;
 &amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;list-of-contributors&quot;&gt;List of Contributors&lt;/h3&gt;
 
