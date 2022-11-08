@@ -12,21 +12,21 @@ sending an e-mail to dev@ after subscription.
 
 ## Committers
 
-| Apache ID | Full Name | Affiliation(s) |
-| --- | :------: | -------------: |
-| bgchun | Byung-Gon Chun | FriendliAI, Seoul National University |
-| gwkim | Geon-Woo Kim | UT Austin |
-| gwlee | Gyewon Lee | FriendliAI |
-| haeyoon | Haeyoon Cho | Qualcomm AI Research |
-| hwarim | Hwarim Hyun | Naver |
-| jangho | JangHo Seo | Naver |
-| jeongyoon | Jeongyoon Eo | Seoul National University |
-| jglee | Jung-Gil Lee | Google |
-| johnyangk | Youngseok Yang | Mirny Inc. |
-| jooykim | Joo Yeon Kim | Samsung Research |
-| sanha | Sanha Lee | Naver |
-| taegeonum | Taegeon Um | Samsung Research |
-| wonook | Won Wook SONG | Seoul National University |
-| wylee | Wooyeon Lee | Samsung Research |
-| yunseong | Yunseong Lee | Qualcomm AI Research |
+| Apache ID | Full Name |
+| --- | ------: |
+| bgchun | Byung-Gon Chun |
+| gwkim | Geon-Woo Kim |
+| gwlee | Gyewon Lee |
+| haeyoon | Haeyoon Cho |
+| hwarim | Hwarim Hyun |
+| jangho | JangHo Seo |
+| jeongyoon | Jeongyoon Eo |
+| jglee | Jung-Gil Lee |
+| johnyangk | Youngseok Yang |
+| jooykim | Joo Yeon Kim |
+| sanha | Sanha Lee |
+| taegeonum | Taegeon Um |
+| wonook | Won Wook SONG |
+| wylee | Wooyeon Lee |
+| yunseong | Yunseong Lee |
 
