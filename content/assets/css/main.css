@@ -2323,7 +2323,7 @@ body { padding-top: 87px; margin-bottom: 46px; }
 
 .page-content { padding-bottom: 20px; }
 
-.footer { position: absolute; bottom: 0; width: 100%; padding-top: 10px; background-color: #eeeeee; color: #333333; }
+.footer { position: absolute; bottom: 180; width: 100%; padding-top: 10px; background-color: #eeeeee; color: #333333; }
 
 .post-list-container li a.active { font-weight: bold; }
 
