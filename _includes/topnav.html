@@ -20,6 +20,17 @@
                 <li {% if page.title=='Team' %} class="active" {% endif %}><a href="{{ "/pages/team" | relative_url }}">Team</a></li>
                 <li {% if page.title=='License' %} class="active" {% endif %}><a href="{{ "/pages/license" | relative_url }}">License</a></li>
                 <li {% if page.sectionid=='blog' %} class="active" {% endif %}><a href="{{ site.posts.first.url | relative_url }}">Blog</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ASF<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.apache.org/">Apache Software Foundation</a></li>
+                    <li><a href="https://www.apache.org/foundation/how-it-works.html">How Apache Works</a></li>
+                    <li><a href="https://www.apache.org/licenses/">License</a></li>
+                    <li><a href="https://www.apache.org/security/">Security</a></li>
+                    <li><a href="https://www.apache.org/foundation/sponsorship.html">Sponsoring Apache</a></li>
+                    <li><a href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+                  </ul>
+                </li>
             </ul>
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">

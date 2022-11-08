@@ -1,10 +1,25 @@
 <footer class="footer">
     <div class="container">
-
-        <p class="text-center">
-            {{ site.title }} {{ site.time | date: '%Y' }} |
-            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
-        </p>
-        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+        <div class="row">
+            <div class="col-sm-11">
+                <p class="text-center">
+                    {{ site.title }} {{ site.time | date: '%Y' }} |
+                    Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+                </p>
+                <br>
+                <p class="text-muted text-center">
+                    Disclaimer: Apache Nemo (incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
+                    <br>
+                    <br>
+                    Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation 
+                </p>
+                <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+            </div>
+            <div class="col-sm-1">
+                <a href="https://www.apache.org/events/current-event.html">
+                    <img src="https://www.apache.org/events/current-event-125x125.png">            
+                </a>
+            </div>
+        </div>
     </div>
 </footer>
