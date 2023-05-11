@@ -30,7 +30,7 @@ The extensible modules illustrated by the red dashed boxes in the figure below,
 are interfaces which users can implement in order to get them to behave the way the user wants.
 Each interface has been transparently integrated with other components of the runtime.
 
-![image]({{site.baseurl}}/assets/runtime_arch.png)
+![image]({{site.baseurl}}/assets/img/runtime.jpg)
 
 
 ### Dictionary

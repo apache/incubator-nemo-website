@@ -8,6 +8,8 @@ permalink: /docs/passes_and_policies/
 The [Nemo IR](../ir) can be flexibly modified, both in its logical structure and annotations, through an interface called *Nemo optimization pass*.
 An *optimization pass* is basically a function that takes an *Nemo IR* and outputs an optimized *Nemo IR*.
 
+![image]({{site.baseurl}}/assets/img/pass.jpg)
+
 ##### Compile-time passes
 
 The modification during compile-time can be categorized in different ways:

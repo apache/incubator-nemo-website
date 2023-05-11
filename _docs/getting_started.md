@@ -5,8 +5,8 @@ permalink: /docs/getting_started/
 
 # Nemo
 
-[![Build Status](https://travis-ci.org/apache/incubator-nemo.svg?branch=master)](https://travis-ci.org/apache/incubator-nemo)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=org.apache.nemo%3Anemo-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.apache.nemo%3Anemo-project)
+[![Java CI with Maven](https://github.com/apache/incubator-nemo/actions/workflows/maven.yml/badge.svg)](https://github.com/apache/incubator-nemo/actions/workflows/maven.yml)
+[![Node.js CI](https://github.com/apache/incubator-nemo/actions/workflows/node.js.yml/badge.svg)](https://github.com/apache/incubator-nemo/actions/workflows/node.js.yml)
 
 A Data Processing System for Flexible Employment With Different Deployment Characteristics.
 
@@ -20,6 +20,10 @@ Details about Nemo and its development can be found in:
 Please refer to the [Contribution guideline](.github/CONTRIBUTING.md) to contribute to our project.
 
 ## Nemo prerequisites and setup
+
+### Simple installation
+
+Run `$ ./bin/install_nemo.sh` on the Nemo home directory. This script includes the actions described below.
 
 ### Prerequisites
 * Java 8 or later (tested on Java 8 and Java 11)
@@ -122,7 +126,7 @@ $ ./bin/run_nexmark.sh \
     -user_main org.apache.beam.sdk.nexmark.Main \
     -optimization_policy org.apache.nemo.compiler.optimizer.policy.StreamingPolicy \
     -scheduler_impl_class_name org.apache.nemo.runtime.master.scheduler.StreamingScheduler \
-    -user_args "--runner=NemoRunner --streaming=true --query=0 --numEventGenerators=1"
+    -user_args "--runner=NemoRunner --streaming=true --query=0 --numEventGenerators=1 --manageResources=false --monitorJobs=false"
 
 ```
 ## Resource Configuration
@@ -207,4 +211,3 @@ $ ./bin/run_beam.sh \
 * To exclude Spark related packages: mvn clean install -T 2C -DskipTests -pl \\!compiler/frontend/spark,\\!examples/spark
 * To exclude Beam related packages: mvn clean install -T 2C -DskipTests -pl \\!compiler/frontend/beam,\\!examples/beam
 * To exclude NEXMark related packages: mvn clean install -T 2C -DskipTests -pl \\!examples/nexmark
-
